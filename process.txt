@@ -1,0 +1,8 @@
+npm i motion clsx tailwind-merge
+@tabler/icons-react"
+npm install react-icons --save
+npm install three @react-three/fiber @react-three/drei
+npm install lucide-react
+npx @sentry/wizard@latest -i nextjs --saas --org du-t5 --project javascript-nextjs
+npm i react-responsive
+npm i react-typed
