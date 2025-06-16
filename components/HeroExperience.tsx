@@ -14,6 +14,7 @@ import { useMediaQuery } from "react-responsive";
 interface HeroExperienceProps {
   isMobile: boolean;
 }
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function HeroExperience({isMobile}: HeroExperienceProps) {
 
   const isMobileQuery = useMediaQuery({ maxWidth: 835 });

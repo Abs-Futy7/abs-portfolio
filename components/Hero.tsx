@@ -8,6 +8,7 @@ import { TbArrowRight } from "react-icons/tb";
 import HeroExperience from "./HeroExperience";
 import { ReactTyped } from "react-typed";
 
+
 function Hero() {
   // Handle responsive sizing with useState + useEffect instead of useMediaQuery
   const [isMobile, setIsMobile] = useState(false);

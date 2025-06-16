@@ -1,8 +1,18 @@
 "use client";
+
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-function Navbar({ items }) {
+interface NavbarItem {
+  name: string;
+  link: string;
+}
+
+interface NavbarProps {
+  items: NavbarItem[];
+}
+
+function Navbar({ items }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
