@@ -6,13 +6,37 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/robot-rocket-f04d70f5a38943098da45f76e7ebb238
 Title: Robot RoCKet
 */
-
+import * as THREE from "three";
 import React, { useRef } from 'react'
 import { useGLTF, useAnimations } from '@react-three/drei'
+import { Group } from 'three'
 
-export function Robot(props) {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/robot_rocket.glb')
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+interface RobotProps extends React.ComponentPropsWithoutRef<'group'> {}
+
+export function Robot(props: RobotProps) {
+  const group = useRef<Group>(null)
+  const { nodes, materials, animations }: {
+    nodes: {
+      _rootJoint: THREE.Bone
+      Object_9: THREE.SkinnedMesh
+      Object_10: THREE.SkinnedMesh
+      Object_11: THREE.SkinnedMesh
+      Object_12: THREE.SkinnedMesh
+      Object_13: THREE.SkinnedMesh
+      Object_14: THREE.SkinnedMesh
+      Object_15: THREE.SkinnedMesh
+    }
+    materials: {
+      naranja: THREE.Material
+      turqueza: THREE.Material
+      luz_neon: THREE.Material
+      azul: THREE.Material
+    }
+    animations: THREE.AnimationClip[]
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } = useGLTF('/robot_rocket.glb') as any
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
