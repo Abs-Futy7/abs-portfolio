@@ -18,23 +18,23 @@ function SplashCursor({
   BACK_COLOR = { r: 0.5, g: 0, b: 0 },
   TRANSPARENT = false,
 }) {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    function pointerPrototype() {
-      this.id = -1;
-      this.texcoordX = 0;
-      this.texcoordY = 0;
-      this.prevTexcoordX = 0;
-      this.prevTexcoordY = 0;
-      this.deltaX = 0;
-      this.deltaY = 0;
-      this.down = false;
-      this.moved = false;
-      this.color = [0, 0, 0];
+    class PointerPrototype {
+      id: number = -1;
+      texcoordX: number = 0;
+      texcoordY: number = 0;
+      prevTexcoordX: number = 0;
+      prevTexcoordY: number = 0;
+      deltaX: number = 0;
+      deltaY: number = 0;
+      down: boolean = false;
+      moved: boolean = false;
+      color: number[] = [0, 0, 0];
     }
 
     let config = {
@@ -55,7 +55,7 @@ function SplashCursor({
       TRANSPARENT,
     };
 
-    let pointers = [new pointerPrototype()];
+    let pointers = [new PointerPrototype()];
 
     const { gl, ext } = getWebGLContext(canvas);
     if (!ext.supportLinearFiltering) {
@@ -76,7 +76,7 @@ function SplashCursor({
       if (!isWebGL2)
         gl =
           canvas.getContext("webgl", params) ||
-          canvas.getContext("experimental-webgl", params);
+          canvas.getContext("experimental-web-gl", params);
       let halfFloat;
       let supportLinearFiltering;
       if (isWebGL2) {
