@@ -7,7 +7,7 @@ import About from "@/components/About";
 import Achievements from "../components/Achievements";
 import Contact from "../components/Contact";
 import Visuals from "@/components/Visuals";
-import { SplashCursor } from "@/components/ui/splash-cursor";
+
 
 
 export default function Home() {
@@ -18,7 +18,6 @@ export default function Home() {
         <section id="home">
         <Navbar items={navItems}/>
           <Hero/>
-          <SplashCursor/>
         </section>
         <section id="about">
           <About/>
