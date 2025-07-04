@@ -7,14 +7,6 @@ A modern, interactive portfolio website showcasing Abu Bakar Siddique's expertis
 **Experience the portfolio live**: [https://abs-portfolio-ten.vercel.app/](https://abs-portfolio-ten.vercel.app/)
 
 
-## 🎥 Video Preview
-
-<video src="screenshots/website_demo.mp4" controls width="700"></video>
-
-*If the video does not play, [download it here](screenshots/website_demo.mp4)*
-
-
-
 
 ## 🛠️ Tech Stack
 
