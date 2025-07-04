@@ -7,6 +7,7 @@ function ButtonMaagic({
   position = "right", 
   href,
   targetSection,
+  downloadFile,
   otherClasses = ""
 }: {
   title?: string;
@@ -14,10 +15,19 @@ function ButtonMaagic({
   position?: "left" | "right";
   href?: string;
   targetSection?: string;
+  downloadFile?: string;
   otherClasses?: string;
 }) {
   const handleClick = () => {
-    if (targetSection) {
+    if (downloadFile) {
+      // Create an anchor element and trigger download
+      const link = document.createElement('a');
+      link.href = downloadFile;
+      link.download = downloadFile.split('/').pop() || 'resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else if (targetSection) {
       document.getElementById(targetSection)?.scrollIntoView({ 
         behavior: 'smooth' 
       });

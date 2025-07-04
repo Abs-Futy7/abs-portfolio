@@ -47,7 +47,7 @@ export default function HeroExperience({isMobile}: HeroExperienceProps) {
           {/* 3D Model */}
           <Robot
             rotation={[0.2, Math.PI / 4, 0.1]}
-            scale={isMobileQuery ? 1 : 1}
+            scale={isMobileQuery ? 0.9 : 0.9}
             position={isMobileQuery ? [0, -2.2, 0] : [0, -1.2, 0]}
           />
           

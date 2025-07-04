@@ -7,6 +7,8 @@ import ButtonMaagic from "./ui/ButtonMaagic";
 import { TbArrowRight } from "react-icons/tb";
 import HeroExperience from "./HeroExperience";
 import { ReactTyped } from "react-typed";
+import Image from "next/image";
+import { FaFileDownload } from "react-icons/fa";
 
 
 function Hero() {
@@ -40,8 +42,35 @@ function Hero() {
         />
       </div>
 
+
       {/* Main Content */}
       <div className="relative z-10 flex flex-col lg:flex-row h-full w-full max-w-7xl mx-auto px-6">
+      {/* Mobile Image */}
+      <div className="w-full flex justify-center mb-6 lg:hidden">
+        <div className="relative w-36 h-36">
+          <Image 
+            src={"/abs.jpg"} 
+            alt="Abs Mobile" 
+            fill
+            className="rounded-full border-2 border-violet-700 object-cover h-40 w-32"
+          />
+          <div className="absolute inset-0 rounded-full pointer-events-none opacity-50"
+            style={{
+              background: "linear-gradient(135deg, rgba(139,92,246,0.6) 10%, rgba(59,130,246,0.4) 80%)",
+              mixBlendMode: "multiply",
+            }}
+          />
+        </div>
+      </div>
+      
+      {/*Desktop Image*/}
+      <Image src={"/abs.jpg"} alt="Abs"  width={500} height={700} className="absolute top-10 left-10 w-42 h-52 rounded-full border-2 border-violet-700 hidden lg:block z-50 scale-95" />
+      <div className="absolute top-11 left-11 w-40 h-50 rounded-full hidden lg:block z-60 pointer-events-none opacity-50"
+          style={{
+            background: "linear-gradient(135deg, rgba(139,92,246,0.6) 10%, rgba(59,130,246,0.4) 80%)",
+            mixBlendMode: "multiply",
+          }}
+        />
         {/* Left Side - Text Content */}
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start py-10 lg:py-20 z-10 line-clamp-1">
           <TextGenerateEffect
@@ -63,10 +92,10 @@ function Hero() {
 
           <div className="mt-10">
             <ButtonMaagic
-              title="Explore My Projects"
-              icon={<TbArrowRight size={20} className="ml-2" />}
+              title="Download CV"
+              icon={<FaFileDownload size={20} className="ml-2" />}
               position="right"
-              targetSection="projects"
+              downloadFile="/MD.Abu_Bakar_Siddique_resume.pdf"
             />
           </div>
         </div>
