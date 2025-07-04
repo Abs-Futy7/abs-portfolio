@@ -29,8 +29,17 @@ export const data = [
 
 
 export const projects = [
+    
     {
         id: 1,
+        title: "PitchLab",
+        description: "PitchLab is an innovative Next.js web application that simulates having AI co-founders for your startup venture. It provides expert guidance through specialized AI agents that help entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure.",
+        img: '/projects/pitchlab.png',
+        link: "https://pitchlab-five.vercel.app/",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini API", "OGL"]
+    },
+    {
+        id: 2,
         title: "Trusty Travels",
         description: "A travel booking platform that allows users to search and book flights, hotels, and car rentals.",
         img: '/projects/trusty.png',
@@ -38,23 +47,7 @@ export const projects = [
         tags: ["Next.js", "Tailwind CSS", "TypeScript"]
     },
     {
-        id: 2,
-        title: "Finance AI Agent",
-        description: "An AI-powered financial assistant that helps users manage their finances, track expenses, and provide investment advice.",
-        link: "https://github.com/Abs-Futy7/Fianace-AI-Agent",
-        img: "/projects/finance-ai-agent.png",
-        tags: ["Next.js", "Tailwind CSS", "TypeScript", "OpenAI API"]
-    },
-    {
         id: 3,
-        title: "Multilingual AI Assistant 🎙️",
-        description: "The Multilingual AI Assistant is a Streamlit-based web application that allows users to ask questions via voice input and receive responses in both text and speech. This project leverages NLP and Text-to-Speech (TTS) technologies to provide an interactive multilingual experience.",
-        link: "https://abs-futy7-multilingual-ai-voice-assitant-app-09yyyw.streamlit.app/",
-        img: "/projects/VoiceAI.png",
-        tags: ["Streamlit", "Python", "NLP", "TTS"]
-    },
-    {
-        id: 4,
         title: "LoreAI",
         description: "LoreAI is a multi-functional Flutter application that harnesses the power of Google's Gemini AI to deliver intelligent features including chatbot interaction, image generation, and text summarization — all in one seamless mobile experience.",
         link: "https://github.com/Abs-Futy7/LoreAI",
@@ -63,7 +56,7 @@ export const projects = [
     }
     ,
     {
-        id: 5,
+        id: 4,
         title: "School Management System",
         description: "The School Management System is an Object-Oriented Programming (OOP) based project designed to efficiently manage school operations for admins, teachers, and students. This system includes features like user authentication, student and teacher management, attendance tracking, fee payment processing, study material sharing, and real-time chat. Built with Java Swing for UI, MySQL for database management, and Apache Ant for project build automation, this system ensures modularity, scalability, and a seamless user experience.",
         link: "https://github.com/Abs-Futy7/2nd-Year-1st-Semester-OOP-Project",
@@ -71,7 +64,7 @@ export const projects = [
         tags: ["Java", "Swing", "MySQL", "OOP"]
     },
     {
-        id: 6,
+        id: 5,
         title: "Puzzle-Paradigm-CSE-1211-Project",
         description: "This is a project for CSE 1211 – Fundamentals of Programming course, University of Dhaka. 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐚𝐫𝐚𝐝𝐢𝐠𝐦 is an exciting game developed by MD.Abu Bakar Siddique, HM Mehedi Hasan & Ahil Islam Aurnob, inspired by the childhood joy of completing jigsaw puzzles.",
         link: "https://github.com/Mehedi26696/Puzzle-Paradigm-CSE-1211-Project",
