@@ -1,0 +1,314 @@
+%-------------------------
+% Resume in Latex
+% Author : Aras Gungore
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{hyphenat}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%---------- FONT OPTIONS ----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue,
+    urlcolor  = blue,
+    citecolor = blue
+}
+
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeEducationHeading}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeOrganizationHeading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%---------- HEADING ----------
+
+\begin{center}
+	\textbf{\Huge \scshape Md. Abu Bakar Siddique} \\ \vspace{3pt}
+	\small
+	\faMobile \hspace{.5pt} \href{tel:+8801XXXXXXXXX}{+8801XXXXXXXXX}
+	$|$
+	\faAt \hspace{.5pt} \href{mailto:abs@example.com}{abs@example.com}
+	$|$
+	\faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/md-abu-bakar-siddique-59b881237/}{LinkedIn}
+	$|$
+	\faGithub \hspace{.5pt} \href{https://github.com/Abs-Futy7}{GitHub}
+	$|$
+        \faGlobe \hspace{.5pt} \href{https://abs-portfolio-ten.vercel.app/}{Portfolio}
+        $|$
+	\faMapMarker \hspace{.5pt} Dhaka, Bangladesh
+\end{center}
+
+%----------- SUMMARY -----------
+
+\section{Summary}
+\vspace{3pt}
+\resumeSubHeadingListStart
+\small{\item{
+	Computer Science student with expertise in cybersecurity, software development, and competitive programming. Specializing in web exploitation, networking, and forensics in CTF competitions. Experienced in full-stack development with Next.js, TypeScript, and modern web technologies.
+}}
+\resumeSubHeadingListEnd
+
+%----------- EDUCATION -----------
+
+\section{Education}
+\vspace{3pt}
+\resumeSubHeadingListStart
+    
+\resumeSubheading
+{University of Dhaka}{Dhaka, Bangladesh}
+{CSE, 3rd Year 1st Semester;   \textbf{CGPA: 3.79/4.00}}{2022 \textbf{--} Present}
+    
+\resumeSubheading
+{Notre Dame College}{Dhaka, Bangladesh}
+{HSC;   \textbf{GPA: 5.00}}{2019 \textbf{--} 2021}
+    
+\resumeSubHeadingListEnd
+
+%----------- SKILLS -----------
+
+\section{Technical Skills}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+	        
+	\textbf{Web Development:}{ HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Tailwind CSS, Node.js, Express.js, FastAPI} \\ \vspace{3pt}
+	        
+	\textbf{Databases \& Tools:}{ MongoDB, PostgreSQL, Supabase, Git \& GitHub, Flutter, Dart} \\ \vspace{3pt}
+
+	\textbf{Cybersecurity \& CTF:}{ Web Exploitation, Reverse Engineering, Forensics, OSINT, Networking} \\ \vspace{3pt}
+
+	\textbf{Design \& Other:}{ Figma, Canva, Photoshop, Illustrator, Java, MySQL} \\ \vspace{3pt}
+	        
+}}
+\resumeSubHeadingListEnd
+
+%----------- EXPERIENCE -----------
+
+\section{Work Experience}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Cybersecurity Team Leader }{University of Dhaka}
+{CTF Team Captain - Networking \& Forensics Specialist}{2024 \textbf{--} Present}
+\resumeItemListStart
+\resumeItem{Leading cybersecurity teams in various CTF competitions with focus on networking and forensics challenges}
+\resumeItem{Achieved multiple top rankings including 1st Runners-UP in PKI Hackathon 2025 and DU CTF 2024}
+\resumeItem{Specialized in web exploitation, reverse engineering, and digital forensics techniques}
+\resumeItemListEnd
+
+\resumeSubheading
+{Full Stack Developer}{Freelance}
+{Web Development \& Software Engineering}{2023 \textbf{--} Present}
+\resumeItemListStart
+\resumeItem{Developing modern web applications using Next.js, TypeScript, and React ecosystem}
+\resumeItem{Building full-stack solutions with PostgreSQL, Supabase, and FastAPI backends}
+\resumeItem{Creating responsive, user-friendly interfaces with Tailwind CSS and modern design principles}
+\resumeItemListEnd
+
+\resumeSubheading
+{Software Development Student}{University Projects}
+{Academic \& Personal Project Development}{2022 \textbf{--} Present}
+\resumeItemListStart
+\resumeItem{Developing complex applications including school management systems and AI-powered platforms}
+\resumeItem{Working with diverse technology stacks including Java, Flutter, and web technologies}
+\resumeItem{Implementing OOP principles and design patterns in real-world applications}
+\resumeItemListEnd
+    
+\resumeSubHeadingListEnd
+
+
+%----------- ACHIEVEMENTS -----------
+
+\section{Achievements}
+\vspace{2pt}
+\resumeSubHeadingListStart
+\small{\item{
+
+	\textbf{1st Runners-UP at PKI Hackathon 2025:} Team 'DU\_Apricot' achieved 2nd place in Public Key Infrastructure Hackathon 2025 organized by Controller of Certifying Authority and ICT Division, Government of Bangladesh. \\ \vspace{3pt}
+
+	\textbf{2nd Runners-UP at UAP Cyber Siege 2025:} Team 'DU\_Black\_Noodles' won 3rd prize in UAP Cyber Siege 2025 organized by University of Asia Pacific. \\ \vspace{3pt}
+    
+	\textbf{1st Runners-UP at DU CTF 2024:} Team 'DU\_Black\_Noodles' achieved 2nd place in DU CTF 2024 organized by CSE, University of Dhaka, demonstrating excellence in cybersecurity challenges. \\ \vspace{3pt}
+
+	\textbf{2nd Place at DUCTF 2024:} Achieved 2nd position in Dhaka University CTF competition, showcasing skills in web exploitation, forensics, and networking. \\ \vspace{3pt}
+
+	\textbf{10th Place at BCSCTF 2024:} Secured top 10 position in Bangladesh Computer Society CTF, competing against national cybersecurity teams. \\ \vspace{3pt}
+
+	\textbf{14th Place at BUETCTF 2024:} Strong performance in Bangladesh University of Engineering and Technology CTF competition. \\ \vspace{3pt}
+
+	\textbf{9th Place at CyberRaid 2025:} Achieved top 10 finish in international cybersecurity competition, demonstrating advanced technical skills. \\ \vspace{3pt}
+
+	\textbf{Multiple CTF Participations:} Active participant in various national and international Capture The Flag competitions including KnightCTF 2025 (50th), picoCTF 2025 (191st), showcasing consistent engagement in cybersecurity challenges.
+}}
+\resumeSubHeadingListEnd
+
+%----------- PROJECTS -----------
+
+\section{Projects}
+\vspace{3pt}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{PitchLab} $|$ \emph{Next.js, TypeScript, Tailwind CSS, Gemini API, OGL} $|$ Personal Project $|$ \emph{\href{https://pitchlab-five.vercel.app/}{\color{blue}Live Demo}}}{}
+\resumeItemListStart
+\resumeItem{Innovative Next.js web application that simulates having AI co-founders for startup ventures, providing expert guidance through specialized AI agents.}
+\resumeItem{Helps entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure using advanced AI integration.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{YtVerb} $|$ \emph{Next.js, TypeScript, Supabase, LangChain, Gemini} $|$ Personal Project $|$ \emph{\href{https://github.com/Abs-Futy7/YtVerb}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{Revolutionary platform enabling intelligent conversations with YouTube videos using advanced RAG (Retrieval-Augmented Generation) architecture.}
+\resumeItem{Extracts, processes, and indexes video transcripts, allowing users to ask questions and get contextual answers about video content without watching the entire video.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{VolunSphere} $|$ \emph{Flutter, Dart, FastAPI, PostgreSQL, Gemini API, Supabase} $|$ Personal Project $|$ \emph{\href{https://github.com/Abs-Futy7/VolunSphere}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{Multi-functional Flutter application harnessing Google's Gemini AI to deliver intelligent features including chatbot interaction, image generation, and text summarization.}
+\resumeItem{Seamless mobile experience with integrated AI capabilities and robust backend infrastructure using FastAPI and PostgreSQL.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{VistaVoyage} $|$ \emph{Next.js, TypeScript, Tailwind CSS, FastAPI, PostgreSQL} $|$ Personal Project $|$ \emph{\href{https://github.com/Abs-Futy7/VistaVoyage}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{Modern travel booking platform featuring comprehensive trip planning, booking management, and user authentication systems.}
+\resumeItem{Built with responsive design principles and integrated backend API for seamless user experience and data management.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{School Management System} $|$ \emph{Java, Swing, MySQL, OOP} $|$ Academic Project $|$ \emph{\href{https://github.com/Abs-Futy7/2nd-Year-1st-Semester-OOP-Project}{\color{blue}GitHub}}}{}
+\resumeItemListStart
+\resumeItem{Comprehensive Object-Oriented Programming project designed to efficiently manage school operations for admins, teachers, and students.}
+\resumeItem{Features include user authentication, student/teacher management, attendance tracking, fee payment processing, study material sharing, and real-time chat functionality.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\textbf{Interactive Portfolio Website} $|$ \emph{Next.js, TypeScript, Three.js, Tailwind CSS} $|$ Personal Project $|$ \emph{\href{https://abs-portfolio-ten.vercel.app/}{\color{blue}Live Demo}}}{}
+\resumeItemListStart
+\resumeItem{Modern, interactive portfolio website showcasing expertise in cybersecurity, software development, and competitive programming with stunning 3D visualizations.}
+\resumeItem{Features responsive design, 3D robot interactions, smooth animations, and comprehensive project showcase with performance optimization and SEO.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

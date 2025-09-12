@@ -53,7 +53,9 @@ export default function HeroExperience({isMobile}: HeroExperienceProps) {
           
           {/* Controls */}
           <OrbitControls
-            enableZoom={isMobileQuery ? true : false}
+            enableZoom={false}
+            enablePan={false}
+            enableRotate={true}
             minPolarAngle={Math.PI / 4}
             maxPolarAngle={Math.PI / 2}
             autoRotate

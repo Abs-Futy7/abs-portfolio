@@ -63,18 +63,10 @@ function Hero() {
         </div>
       </div>
       
-      {/*Desktop Image*/}
-      <Image src={"/abs.jpg"} alt="Abs"  width={500} height={700} className="absolute top-10 left-10 w-42 h-52 rounded-full border-2 border-violet-700 hidden lg:block z-50 scale-95" />
-      <div className="absolute top-11 left-11 w-40 h-50 rounded-full hidden lg:block z-60 pointer-events-none opacity-50"
-          style={{
-            background: "linear-gradient(135deg, rgba(139,92,246,0.6) 10%, rgba(59,130,246,0.4) 80%)",
-            mixBlendMode: "multiply",
-          }}
-        />
         {/* Left Side - Text Content */}
-        <div className="flex-1 flex flex-col justify-center items-center lg:items-start py-10 lg:py-20 z-10 line-clamp-1">
+        <div className="flex-1 flex flex-col justify-center items-center lg:items-start py-10 lg:py-20 z-10 line-clamp-2">
           <TextGenerateEffect
-            words="Hi, I'm Abs"
+            words="Hi, I'm Abu Bakar"
             className={cn(
               "text-5xl text-white md:text-6xl lg:text-7xl font-[Neue_Machina]  tracking-tight font-extralight text-center lg:text-left leading-tight",
               
@@ -90,14 +82,7 @@ function Hero() {
             loop
           />
 
-          <div className="mt-10">
-            <ButtonMaagic
-              title="Download CV"
-              icon={<FaFileDownload size={20} className="ml-2" />}
-              position="right"
-              downloadFile="/MD.Abu_Bakar_Siddique_resume.pdf"
-            />
-          </div>
+          
         </div>
 
         {/* Right Side - 3D Model */}

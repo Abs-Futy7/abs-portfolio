@@ -13,8 +13,30 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: "Abs Portfolio",
-  description: "A portfolio showcasing my work and skills",
-  keywords: ["portfolio", "web development", "design"]
+  description: "A modern, interactive portfolio website showcasing Abu Bakar Siddique's expertise in cybersecurity, software development, and competitive programming.",
+  keywords: ["portfolio", "web development", "cybersecurity", "nextjs", "threejs", "Abu Bakar Siddique", "design"],
+  openGraph: {
+    title: "Abs Portfolio | Abu Bakar Siddique",
+    description: "A modern, interactive portfolio website showcasing Abu Bakar Siddique's expertise in cybersecurity, software development, and competitive programming.",
+    url: "https://abs-portfolio-ten.vercel.app/",
+    siteName: "Abs Portfolio",
+    images: [
+      {
+        url: "/screenshots/image.png",
+        width: 1200,
+        height: 630,
+        alt: "ABS Portfolio Preview"
+      }
+    ],
+    type: "website",
+    locale: "en_US"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abs Portfolio | Abu Bakar Siddique",
+    description: "A modern, interactive portfolio website showcasing Abu Bakar Siddique's expertise in cybersecurity, software development, and competitive programming.",
+    images: ["/screenshots/image.png"]
+  }
 };
 
 export default function RootLayout({

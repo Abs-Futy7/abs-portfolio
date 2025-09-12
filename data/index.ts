@@ -29,30 +29,30 @@ export const data = [
 
 
 export const projects = [
-    
     {
         id: 1,
-        title: "PitchLab",
-        description: "PitchLab is an innovative Next.js web application that simulates having AI co-founders for your startup venture. It provides expert guidance through specialized AI agents that help entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure.",
-        img: '/projects/pitchlab.png',
-        link: "https://pitchlab-five.vercel.app/",
-        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini API", "OGL"]
+        title: "YtVerb",
+        description: "YtVerb revolutionizes how you interact with YouTube content by enabling intelligent conversations with any YouTube video. Using advanced RAG (Retrieval-Augmented Generation) architecture, the platform extracts, processes, and indexes video transcripts, allowing users to ask questions and get contextual answers about video content without watching the entire video.",
+        link: "https://github.com/Abs-Futy7/YtVerb",
+        img: "/projects/ytverb.png",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Supabase", "LangChain", "Gemini"]
     },
+    
     {
         id: 2,
-        title: "Trusty Travels",
-        description: "A travel booking platform that allows users to search and book flights, hotels, and car rentals.",
-        img: '/projects/trusty.png',
-        link: "https://trusty-travels.vercel.app",
-        tags: ["Next.js", "Tailwind CSS", "TypeScript"]
+        title: "VistaVoyage",
+        description: "Modern Travel Booking Platform",
+        img: '/projects/landing1.png',
+        link: "https://github.com/Abs-Futy7/VistaVoyage",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "FastAPI", "PostgreSQL"]
     },
     {
         id: 3,
-        title: "LoreAI",
-        description: "LoreAI is a multi-functional Flutter application that harnesses the power of Google's Gemini AI to deliver intelligent features including chatbot interaction, image generation, and text summarization — all in one seamless mobile experience.",
-        link: "https://github.com/Abs-Futy7/LoreAI",
-        img: "/projects/LoreAI.png",
-        tags: ["Flutter", "Dart", "AI", "Mobile"]
+        title: "VolunSphere",
+        description: "VolunSphere is a comprehensive volunteer management mobile application built with Flutter and Dart for the frontend, and FastAPI with PostgreSQL for the backend. The app connects volunteers with organizations, allowing users to browse and sign up for volunteer opportunities, track their hours, and receive notifications about upcoming events. The backend leverages Gemini API for advanced features like AI-driven recommendations and Supabase for real-time database management and authentication.",
+        link: "https://github.com/Abs-Futy7/VolunSphere",
+        img: "/projects/volunsphere.jpg",
+        tags: ["Flutter", "Dart", "FastAPI", "PostgreSQL", "Gemini API", "Supabase", "Groq"]
     }
     ,
     {
@@ -65,11 +65,11 @@ export const projects = [
     },
     {
         id: 5,
-        title: "Puzzle-Paradigm-CSE-1211-Project",
-        description: "This is a project for CSE 1211 – Fundamentals of Programming course, University of Dhaka. 𝐏𝐮𝐳𝐳𝐥𝐞 𝐏𝐚𝐫𝐚𝐝𝐢𝐠𝐦 is an exciting game developed by MD.Abu Bakar Siddique, HM Mehedi Hasan & Ahil Islam Aurnob, inspired by the childhood joy of completing jigsaw puzzles.",
-        link: "https://github.com/Mehedi26696/Puzzle-Paradigm-CSE-1211-Project",
-        img: "/projects/puzzle.png",
-        tags: ["C++", "OpenGL", "iGraphics", "Game Development"]
+        title: "PitchLab",
+        description: "PitchLab is an innovative Next.js web application that simulates having AI co-founders for your startup venture. It provides expert guidance through specialized AI agents that help entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure.",
+        img: '/projects/pitchlab.png',
+        link: "https://pitchlab-five.vercel.app/",
+        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini API", "OGL"]
     }
 ]
 
@@ -148,48 +148,54 @@ export const teamMembers = [
 
 
 export const ctfData = [
-  {
-    id: 1,
-    name: "DUCTF",
-    year: 2024,
-    rank: "2nd" ,
-  },
-  {
-    id: 2,
-    name: "BCSCTF",
-    year: 2024,
-    rank: "10th",
-  },
-  {
-    id: 3,
-    name: "BUETCTF",
-    year: 2024,
-    rank: "14th",
-  },
-  {
-    id: 4,
-    name: "CyberRaid",
-    year: 2025,
-    rank: "9th",
-  },
-  {
-    id: 5,
-    name: "KnightCTF",
-    year: 2025,
-    rank: "50th",
-  },
-  {
-    id: 6,
-    name: "picoCTF",
-    year: 2025,
-    rank: "191st",
-  },
-  {
-    id: 7,
-    name: "UAP Cyber Siege",
-    year: 2024,
-    rank: "3rd",
-  }
+    {
+        id: 1,
+        name: "DUCTF",
+        year: 2024,
+        rank: "2nd" ,
+    },
+    {
+        id: 7,
+        name: "UAP Cyber Siege",
+        year: 2024,
+        rank: "3rd",
+    },
+    {
+        id: 8,
+        name: "BDSecCtf 2025",
+        year: 2025,
+        rank: "7th",
+    },
+    {
+        id: 4,
+        name: "CyberRaid",
+        year: 2025,
+        rank: "9th",
+    },
+    {
+        id: 2,
+        name: "BCSCTF",
+        year: 2024,
+        rank: "10th",
+    },
+    {
+        id: 3,
+        name: "BUETCTF",
+        year: 2024,
+        rank: "14th",
+    },
+    {
+        id: 5,
+        name: "KnightCTF",
+        year: 2025,
+        rank: "50th",
+    },
+    {
+        id: 6,
+        name: "picoCTF",
+        year: 2025,
+        rank: "191st",
+    }
 ]
 
 
@@ -209,7 +215,7 @@ export const achievements = [
     {
         name: "1st Runners-UP - DU CTF 2024",
         subtitle: "DU_Black_Noodles won 2nd prize in DU CTF 2024 organized by CSE, University of Dhaka.",
-        img: "/achievements/ductf.jpg",
+        img: "/achievements/image.png",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7278103645320024064/"
     },
     

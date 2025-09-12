@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
+import ButtonMaagic from "./ui/ButtonMaagic";
+import { FaFileDownload } from "react-icons/fa";
 
 interface NavbarItem {
   name: string;
@@ -17,7 +19,7 @@ function Navbar({ items }: NavbarProps) {
 
   return (
     <>
-      <div className="relative w-[95%] max-w-[1000px] mx-auto p-[1px] rounded-full overflow-hidden bg-gradient-to-r from-purple-500 to-blue-500 mt-6">
+      <div className="relative w-[95%] max-w-[1200px] mx-auto p-[1px] rounded-full overflow-hidden bg-gradient-to-r from-purple-500 to-blue-500 mt-6">
         <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
         <nav className="flex justify-between items-center w-full px-3 sm:px-4 py-2 sm:py-3 rounded-full bg-slate-950 backdrop-blur-lg">
@@ -27,7 +29,7 @@ function Navbar({ items }: NavbarProps) {
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
             <ul className="flex gap-2 lg:gap-6 text-[15px] lg:text-[16px] text-white">
               {items.map((item) => (
                 <li key={item.name}>
@@ -38,8 +40,20 @@ function Navbar({ items }: NavbarProps) {
                     {item.name}
                   </a>
                 </li>
+                
               ))}
             </ul>
+            
+            {/* Desktop Download CV Button */}
+            <div className="ml-2">
+              <ButtonMaagic
+                title="Download CV"
+                icon={<FaFileDownload size={16} className="ml-2" />}
+                position="right"
+                downloadFile="/MD_Abu_Bakar_Siddique_resume.pdf"
+                otherClasses="h-10 text-md "
+              />
+            </div>
           </div>
 
           {/* Mobile menu toggle */}
@@ -66,6 +80,17 @@ function Navbar({ items }: NavbarProps) {
               {item.name}
             </a>
           ))}
+          
+          {/* Mobile Download CV Button */}
+          <div className="pt-2">
+            <ButtonMaagic
+              title="Download CV"
+              icon={<FaFileDownload size={16} className="ml-2" />}
+              position="right"
+              downloadFile="/MD.Abu_Bakar_Siddique_resume.pdf"
+              otherClasses="h-10 text-sm w-full"
+            />
+          </div>
         </div>
       )}
     </>
