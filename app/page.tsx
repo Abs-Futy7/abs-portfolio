@@ -15,6 +15,7 @@ export default function Home() {
     <div className="relative">
       
       <main className="relative z-10">
+        
         <section id="home">
         <Navbar items={navItems}/>
           <Hero/>

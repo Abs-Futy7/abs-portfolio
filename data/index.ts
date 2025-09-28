@@ -30,6 +30,14 @@ export const data = [
 
 export const projects = [
     {
+        id: 0,
+        title: "MindMate",
+        description: "MindMate is an innovative web application designed to assist users in managing their mental health through the power of AI. Built with Next.js and Tailwind CSS for a responsive and user-friendly interface, the platform leverages FastAPI for robust backend services and PostgreSQL for efficient data management. The application integrates Gemini API to provide personalized mental health support, resources, and tools based on user profiles and preferences.",
+        img: '/projects/home.PNG',
+        link: "https://mind-mate-sepia.vercel.app/",
+        tags: ["Next.js", "FastAPI", "TypeScript", "Supabase", "PostgreSQL", "Hugging Face"]
+    },
+    {
         id: 1,
         title: "YtVerb",
         description: "YtVerb revolutionizes how you interact with YouTube content by enabling intelligent conversations with any YouTube video. Using advanced RAG (Retrieval-Augmented Generation) architecture, the platform extracts, processes, and indexes video transcripts, allowing users to ask questions and get contextual answers about video content without watching the entire video.",
@@ -155,6 +163,12 @@ export const ctfData = [
         rank: "2nd" ,
     },
     {
+        id: 9,
+        name: "BUP CTF",
+        year: 2025,
+        rank: "3rd",
+    },
+    {
         id: 7,
         name: "UAP Cyber Siege",
         year: 2024,
@@ -218,6 +232,12 @@ export const achievements = [
         img: "/achievements/image.png",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7278103645320024064/"
     },
+    {
+        name: "2nd Runners-UP - BUP CTF 2025",
+        subtitle: "Our team, 𝐃𝐔_𝐁𝐥𝐚𝐜𝐤_𝐍𝐨𝐨𝐝𝐥𝐞𝐬, earned 2660 points and secured 𝟑𝐫𝐝 𝐩𝐥𝐚𝐜𝐞 at the 𝐁𝐔𝐏 𝐂𝐓𝐅 𝟐𝟎𝟐𝟓 powered by Knight Squad.",
+        img: "/achievements/bup.jpg",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7377368273832673280/"
+    }
     
 ]
 

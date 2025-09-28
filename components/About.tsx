@@ -6,6 +6,7 @@ import { GoArrowDown } from 'react-icons/go';
 import { MdOutlineSecurity } from 'react-icons/md';
 import { SiMaterialdesignicons } from 'react-icons/si';
 import { ctfSkills, visualSkills, webDevSkills } from '@/data';
+import Image from 'next/image';
 
 function About() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -24,6 +25,18 @@ function About() {
           ABOUT <span className="text-purple-500 font-normal">ME </span>
           <GoArrowDown className='inline-block animate-bounce'/>
         </motion.h1>
+
+        {/* Profile Image - Centered and Responsive */}
+        <div className="flex justify-center mb-12">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72">
+            <Image 
+              src="/abs.png" 
+              alt="About Me" 
+              fill
+              className="rounded-full shadow-lg object-cover border-4 border-purple-800"
+            />
+          </div>
+        </div>
         
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

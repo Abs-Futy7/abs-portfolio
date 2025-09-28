@@ -45,24 +45,6 @@ function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col lg:flex-row h-full w-full max-w-7xl mx-auto px-6">
-      {/* Mobile Image */}
-      <div className="w-full flex justify-center mb-6 lg:hidden">
-        <div className="relative w-36 h-36">
-          <Image 
-            src={"/abs.jpg"} 
-            alt="Abs Mobile" 
-            fill
-            className="rounded-full border-2 border-violet-700 object-cover h-40 w-32"
-          />
-          <div className="absolute inset-0 rounded-full pointer-events-none opacity-50"
-            style={{
-              background: "linear-gradient(135deg, rgba(139,92,246,0.6) 10%, rgba(59,130,246,0.4) 80%)",
-              mixBlendMode: "multiply",
-            }}
-          />
-        </div>
-      </div>
-      
         {/* Left Side - Text Content */}
         <div className="flex-1 flex flex-col justify-center items-center lg:items-start py-10 lg:py-20 z-10 line-clamp-2">
           <TextGenerateEffect
