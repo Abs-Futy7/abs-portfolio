@@ -87,7 +87,7 @@ function Navbar({ items }: NavbarProps) {
               title="Download CV"
               icon={<FaFileDownload size={16} className="ml-2" />}
               position="right"
-              downloadFile="/MD.Abu_Bakar_Siddique_resume.pdf"
+              downloadFile="/MD_Abu_Bakar_Siddique_resume.pdf"
               otherClasses="h-10 text-sm w-full"
             />
           </div>
