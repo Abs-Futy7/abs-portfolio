@@ -71,14 +71,23 @@ export const projects = [
         img: "/projects/sch.png",
         tags: ["Java", "Swing", "MySQL", "OOP"]
     },
-    {
+    /*{
         id: 5,
         title: "PitchLab",
         description: "PitchLab is an innovative Next.js web application that simulates having AI co-founders for your startup venture. It provides expert guidance through specialized AI agents that help entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure.",
         img: '/projects/pitchlab.png',
         link: "https://pitchlab-five.vercel.app/",
         tags: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini API", "OGL"]
-    }
+    },*/
+    {
+        id: 6,
+        title: "SyncroX",
+        description: "A collaborative platform demonstrating advanced networking concepts including custom TCP protocols, Tahoe/Reno congestion control, RTT estimation, and secure Docker-based code execution for the Computer Networking Lab course.",
+        img: '/projects/syncrox.png',
+        link: "https://github.com/Abs-Futy7/SyncroX",
+        tags: ["Python", "Docker", "TCP", "Streamlit"]
+    },
+    
 ]
 
 
@@ -162,6 +171,17 @@ export const ctfData = [
         year: 2024,
         rank: "2nd" ,
     },
+    {        id: 11,
+        name: "Cipher Sprint CTF",
+        year: 2025,
+        rank: "2nd",
+    },
+    {
+        id: 12,
+        name: "DIU CTF",
+        year: 2025,
+        rank: "2nd",
+    },
     {
         id: 9,
         name: "BUP CTF",
@@ -173,6 +193,12 @@ export const ctfData = [
         name: "UAP Cyber Siege",
         year: 2024,
         rank: "3rd",
+    },
+    {
+        id: 10,
+        name: "Al-Khwarizmi CTF",
+        year: 2026,
+        rank: "4th",
     },
     {
         id: 8,
@@ -221,6 +247,18 @@ export const achievements = [
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7332061841239470080/"
     },
     {
+        name: "1st Runners-UP | CipherSprint CTF - CIRCUIT CLASH 1.0",
+        subtitle: "𝐃𝐔_𝐁𝐥𝐚𝐜𝐤_𝐍𝐨𝐨𝐝𝐥𝐞𝐬 secured the 🥈𝟏𝐬𝐭 𝐑𝐮𝐧𝐧𝐞𝐫-𝐔𝐩 position in the CipherSprint CTF 2025, powered by Knight Squad and organized by the BUP Robotics Club, with a total score of 1165 points! ",
+        img: "/achievements/CipherSprint.png",
+        link: "https://www.linkedin.com/posts/md-abu-bakar-siddique-59b881237_ciphersprint-capturetheflag-ctf-activity-7396587491169837056-kGNz?utm_source=share&utm_medium=member_desktop&rcm=ACoAADsKIgcBSqSQNqtJhwwj_9VsmTUKu-EBLiQ"
+    },
+    {
+        name: "1st Runners-UP - 𝐃𝐈𝐔 𝐂𝐲𝐛𝐞𝐫𝐂𝐨𝐧 – 𝐍𝐚𝐭𝐢𝐨𝐧𝐚𝐥 𝐂𝐚𝐩𝐭𝐮𝐫𝐞 𝐓𝐡𝐞 𝐅𝐥𝐚𝐠 𝐂𝐨𝐦𝐩𝐞𝐭𝐢𝐭𝐢𝐨𝐧 𝟐𝟎𝟐𝟓",
+        subtitle: "𝐃𝐔_𝐁𝐥𝐚𝐜𝐤_𝐍𝐨𝐨𝐝𝐥𝐞𝐬 achieved the 🥈𝟏𝐬𝐭 𝐑𝐮𝐧𝐧𝐞𝐫-𝐔𝐩 position at the National Capture The Flag Competition 2025, organized by the Cyber Security Club, Daffodil International University under DIU_CYBERCON, with a total of 3632 point",
+        img: "/achievements/diu.png",
+        link: "https://www.linkedin.com/posts/md-abu-bakar-siddique-59b881237_ctf-cybersecurity-ethicalhacking-activity-7390052587158360069-QUjx?utm_source=share&utm_medium=member_desktop&rcm=ACoAADsKIgcBSqSQNqtJhwwj_9VsmTUKu-EBLiQ"
+    },
+    {
         name: "2nd Runners-UP - UAP Cyber Seige 2025",
         subtitle: "DU_Black_Noodles won 3rd prize in UAP Cyber Seige 2025 organized by University of Asia Pacific.",
         img: "/achievements/uap.png",
@@ -237,6 +275,12 @@ export const achievements = [
         subtitle: "Our team, 𝐃𝐔_𝐁𝐥𝐚𝐜𝐤_𝐍𝐨𝐨𝐝𝐥𝐞𝐬, earned 2660 points and secured 𝟑𝐫𝐝 𝐩𝐥𝐚𝐜𝐞 at the 𝐁𝐔𝐏 𝐂𝐓𝐅 𝟐𝟎𝟐𝟓 powered by Knight Squad.",
         img: "/achievements/bup.jpg",
         link: "https://www.linkedin.com/feed/update/urn:li:activity:7377368273832673280/"
+    },
+    {
+        name: "Al-Khwarizmi CTF 2026 - 4th Place",
+        subtitle: "Our team, 𝐃𝐔_𝐁𝐥𝐚𝐜𝐤_𝐍𝐨𝐨𝐝𝐥𝐞𝐬, secured the 4th position among 650+ teams in the Al-Khwarizmi CTF 2026 with total 5520 points, organized by the Bangladesh Islamic ChhatraShibir.",
+        img: "/achievements/shibir.jpg",
+        link: "https://www.linkedin.com/feed/update/urn:li:activity:7246222636544867840/"
     }
     
 ]
