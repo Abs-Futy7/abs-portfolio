@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import { StarsBackground } from "@/components/ui/StarBG";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const raleway = Raleway({
@@ -55,6 +56,7 @@ export default function RootLayout({
         <div className="relative z-10">
           {children}
         </div>
+        <Analytics />
       </body>
     </html>
   );
