@@ -6,7 +6,7 @@ import { FaFlag } from "react-icons/fa";
 
 function Ctf() {
   return (
-    <div className='py-10 px-4 sm:px-8 md:px-16'>
+    <div className='py-10 px-4 sm:px-8 md:px-16 mx-auto'>
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-extralight text-center mb-6 font-[Neue_Machina] tracking-tight">
         CTF player{" "}
         <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">
@@ -20,7 +20,7 @@ function Ctf() {
         <AnimatedTestimonials testimonials={teamMembers} />
       </div>
 
-      <h2 className="text-2xl sm:text-3xl font-light text-center md:text-start mb-6 md:mb-12 mt-6 md:mt-0">
+      <h2 className="text-2xl sm:text-3xl font-light text-center md:text-start mb-6 md:mb-12 mt-6 md:mt-0 max-w-7xl mx-auto">
         Previous Competitions
       </h2>
       
@@ -59,7 +59,7 @@ function Ctf() {
       `}</style>
       
       {/* Responsive grid with 2 columns on small screens */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-x-10 md:gap-y-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-x-10 md:gap-y-6 max-w-7xl mx-auto">
         {ctfData.map((ctf) => (
           <div 
             key={ctf.id} 

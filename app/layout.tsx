@@ -3,6 +3,7 @@ import { Raleway } from "next/font/google";
 import "./globals.css";
 import { StarsBackground } from "@/components/ui/StarBG";
 import { Analytics } from "@vercel/analytics/next";
+import { MouseFollowupAnimation } from "@/components/ui/mouse-followup-animation";
 
 
 const raleway = Raleway({
@@ -52,6 +53,7 @@ export default function RootLayout({
       >
         {/* Background Beams applied to the entire app */}
         <StarsBackground/>
+        <MouseFollowupAnimation className="fixed inset-0 z-[5]" />
         {/* All page content will be rendered here, on top of the background */}
         <div className="relative z-10">
           {children}

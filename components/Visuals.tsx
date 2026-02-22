@@ -6,28 +6,33 @@ import { visualSrc1, visualSrc2 } from '@/data';
 
 function Visuals() {
   return (
-    <div className="h-[50rem] rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden py-6">
+    <div className=" rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden py-6 my-16">
       <h1 className="text-5xl font-extralight text-center my-10 font-[Neue_Machina] tracking-tight">
         MY <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500">VISUALS</span>
       </h1>
       
-        <MovingCards
+        <div className='my-6'>
+          <MovingCards
         items={visualSrc1}
         direction="right"
         speed="slow"
       />
-      <MovingCards
+        </div>
+      <div className='my-6'><MovingCards
         items={visualSrc2}
         direction="left"
         speed="slow"
-      />
-      <ButtonMaagic
+      /></div>
+
+      <div className='mt-10'>
+        <ButtonMaagic
           title="Visit Behance Portfolio"
-          icon={<FaBehanceSquare className='text-xl ml-2' />}
+          icon={<FaBehanceSquare className='text-xl ml-2 ' />}
           otherClasses="hover:bg-purple-500/20 bg-purple-500/10 text-purple-500 font-medium"
           position="right"
           href="https://www.behance.net/_A_BS_750"
         />
+      </div>
 
     </div>
   )

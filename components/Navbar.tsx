@@ -19,18 +19,18 @@ function Navbar({ items }: NavbarProps) {
 
   return (
     <>
-      <div className="relative w-[95%] max-w-[1200px] mx-auto p-[1px] rounded-full overflow-hidden bg-gradient-to-r from-purple-500 to-blue-500 mt-6">
+      <div className="relative w-[95%] max-w-[1200px] mx-auto p-[1px] rounded-2xl overflow-hidden bg-gradient-to-r from-purple-500 to-blue-500 mt-6">
         <span className="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 
-        <nav className="flex justify-between items-center w-full px-3 sm:px-4 py-2 sm:py-3 rounded-full bg-slate-950 backdrop-blur-lg">
+        <nav className="flex justify-between items-center w-full px-3 sm:px-4 py-1 sm:py-2 rounded-2xl bg-slate-950 backdrop-blur-lg">
           {/* Logo or brand */}
           <div className="flex items-center justify-center text-white font-semibold font-[Helvetica] text-xl sm:text-2xl">
             Abs<span className="text-2xl sm:text-3xl text-purple-400">.</span>
           </div>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-4">
-            <ul className="flex gap-2 lg:gap-6 text-[15px] lg:text-[16px] text-white">
+          <div className="hidden md:flex items-center gap-2">
+            <ul className="flex gap-2 lg:gap-4 text-[15px] lg:text-[16px] text-white">
               {items.map((item) => (
                 <li key={item.name}>
                   <a

@@ -87,7 +87,7 @@ export const MovingCards = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="flex-shrink-0 w-64 h-64 rounded-lg overflow-hidden shadow-lg"
+            className="flex-shrink-0 w-70 h-70 rounded-lg overflow-hidden shadow-lg"
           >
             <img
               src={item.src}

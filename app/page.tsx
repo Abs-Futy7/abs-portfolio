@@ -26,14 +26,14 @@ export default function Home() {
         <section id="projects">
           <RecentProjects/>
         </section>
+        <section id= 'visuals'>
+          <Visuals/>
+        </section>
         <section id="ctfs">
           <Ctf/>
         </section>
         <section id = 'achievements'>
           <Achievements/>
-        </section>
-        <section id= 'visuals'>
-          <Visuals/>
         </section>
         <section id="contact">
           <Contact/>

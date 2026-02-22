@@ -28,68 +28,93 @@ export const data = [
 ]
 
 
-export const projects = [
+export type Project = {
+    id: number;
+    slug: string;
+    title: string;
+    description: string;
+    img: string;
+    images: string[];
+    tags: string[];
+    link?: string;
+    liveLink?: string;
+    githubLink?: string;
+    repoLink?: string;
+    videoLink?: string;
+}
+export const projects: Project[] = [
+    {
+        id: 7,
+        slug: "shinraai",
+        title: "ShinraAI",
+        description: "Dual-pipeline multi-agent orchestration: PRD -> source-grounded, publishable blog with claim validation, fact-check rewrite loops, and full observability (logs + metrics + token).",
+        img: "/projects/shinraai/shinraai.png",
+        images: ["/projects/shinraai/shinraai.png", "/projects/shinraai/studio.png", "/projects/shinraai/agent-workflow1.png", "/projects/shinraai/claim-agent.png", "/projects/shinraai/agent-workflow2.png"],
+        githubLink: "https://github.com/Abs-Futy7/ShinraAI",
+        repoLink: "https://github.com/Abs-Futy7/ShinraAI",
+        link: "https://github.com/Abs-Futy7/ShinraAI",
+        tags: ["NextJs", "Gemini", "CrewAI", "Agentic AI", "FastApi"]
+    },
     {
         id: 0,
+        slug: "mindmate",
         title: "MindMate",
         description: "MindMate is an innovative web application designed to assist users in managing their mental health through the power of AI. Built with Next.js and Tailwind CSS for a responsive and user-friendly interface, the platform leverages FastAPI for robust backend services and PostgreSQL for efficient data management. The application integrates Gemini API to provide personalized mental health support, resources, and tools based on user profiles and preferences.",
-        img: '/projects/home.PNG',
+        img: "/projects/mindmate/home.PNG",
+        images: ["/projects/mindmate/home.PNG", "/projects/mindmate/1.png", "/projects/mindmate/2.png", "/projects/mindmate/3.png", "/projects/mindmate/4.png", "/projects/mindmate/5.png"],
+        liveLink: "https://mind-mate-sepia.vercel.app/",
         link: "https://mind-mate-sepia.vercel.app/",
         tags: ["Next.js", "FastAPI", "TypeScript", "Supabase", "PostgreSQL", "Hugging Face"]
     },
     {
         id: 1,
+        slug: "ytverb",
         title: "YtVerb",
         description: "YtVerb revolutionizes how you interact with YouTube content by enabling intelligent conversations with any YouTube video. Using advanced RAG (Retrieval-Augmented Generation) architecture, the platform extracts, processes, and indexes video transcripts, allowing users to ask questions and get contextual answers about video content without watching the entire video.",
+        img: "/projects/ytverb/image.png",
+        images: ["/projects/ytverb/image.png", "/projects/ytverb/1.png", "/projects/ytverb/ytverb.png"],
+        githubLink: "https://github.com/Abs-Futy7/YtVerb",
+        repoLink: "https://github.com/Abs-Futy7/YtVerb",
         link: "https://github.com/Abs-Futy7/YtVerb",
-        img: "/projects/ytverb.png",
         tags: ["Next.js", "Tailwind CSS", "TypeScript", "Supabase", "LangChain", "Gemini"]
     },
-    
     {
         id: 2,
+        slug: "vistavoyage",
         title: "VistaVoyage",
         description: "Modern Travel Booking Platform",
-        img: '/projects/landing1.png',
+        img: "/projects/vistavoyage/landing1.png",
+        images: ["/projects/vistavoyage/landing1.png", "/projects/vistavoyage/1.png", "/projects/vistavoyage/2.png", "/projects/vistavoyage/3.png", "/projects/vistavoyage/4.png", "/projects/vistavoyage/5.png"],
+        githubLink: "https://github.com/Abs-Futy7/VistaVoyage",
+        repoLink: "https://github.com/Abs-Futy7/VistaVoyage",
         link: "https://github.com/Abs-Futy7/VistaVoyage",
         tags: ["Next.js", "Tailwind CSS", "TypeScript", "FastAPI", "PostgreSQL"]
     },
     {
         id: 3,
+        slug: "volunsphere",
         title: "VolunSphere",
         description: "VolunSphere is a comprehensive volunteer management mobile application built with Flutter and Dart for the frontend, and FastAPI with PostgreSQL for the backend. The app connects volunteers with organizations, allowing users to browse and sign up for volunteer opportunities, track their hours, and receive notifications about upcoming events. The backend leverages Gemini API for advanced features like AI-driven recommendations and Supabase for real-time database management and authentication.",
+        img: "/projects/volunsphere/volunsphere.jpg",
+        images: ["/projects/volunsphere/volunsphere.jpg", "/projects/volunsphere/1.png", "/projects/volunsphere/2.png", "/projects/volunsphere/3.png", "/projects/volunsphere/4.png", "/projects/volunsphere/5.png"],
+        githubLink: "https://github.com/Abs-Futy7/VolunSphere",
+        repoLink: "https://github.com/Abs-Futy7/VolunSphere",
         link: "https://github.com/Abs-Futy7/VolunSphere",
-        img: "/projects/volunsphere.jpg",
         tags: ["Flutter", "Dart", "FastAPI", "PostgreSQL", "Gemini API", "Supabase", "Groq"]
-    }
-    ,
-    {
-        id: 4,
-        title: "School Management System",
-        description: "The School Management System is an Object-Oriented Programming (OOP) based project designed to efficiently manage school operations for admins, teachers, and students. This system includes features like user authentication, student and teacher management, attendance tracking, fee payment processing, study material sharing, and real-time chat. Built with Java Swing for UI, MySQL for database management, and Apache Ant for project build automation, this system ensures modularity, scalability, and a seamless user experience.",
-        link: "https://github.com/Abs-Futy7/2nd-Year-1st-Semester-OOP-Project",
-        img: "/projects/sch.png",
-        tags: ["Java", "Swing", "MySQL", "OOP"]
     },
-    /*{
-        id: 5,
-        title: "PitchLab",
-        description: "PitchLab is an innovative Next.js web application that simulates having AI co-founders for your startup venture. It provides expert guidance through specialized AI agents that help entrepreneurs make informed decisions about technical architecture, marketing strategies, financial planning, and project structure.",
-        img: '/projects/pitchlab.png',
-        link: "https://pitchlab-five.vercel.app/",
-        tags: ["Next.js", "Tailwind CSS", "TypeScript", "Gemini API", "OGL"]
-    },*/
     {
         id: 6,
+        slug: "syncrox",
         title: "SyncroX",
         description: "A collaborative platform demonstrating advanced networking concepts including custom TCP protocols, Tahoe/Reno congestion control, RTT estimation, and secure Docker-based code execution for the Computer Networking Lab course.",
-        img: '/projects/syncrox.png',
+        img: "/projects/syncrox/syncrox.png",
+        images: ["/projects/syncrox/syncrox.png", "/projects/syncrox/1.png", "/projects/syncrox/2.png", "/projects/syncrox/3.png", "/projects/syncrox/4.png"],
+        githubLink: "https://github.com/Abs-Futy7/SyncroX",
+        repoLink: "https://github.com/Abs-Futy7/SyncroX",
         link: "https://github.com/Abs-Futy7/SyncroX",
         tags: ["Python", "Docker", "TCP", "Streamlit"]
-    },
-    
+    }
 ]
-
 
 export const navItems = [
     {

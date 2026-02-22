@@ -41,7 +41,7 @@ function Contact() {
             </h2>
             <div className='space-y-2 md:space-y-2'>
               <a 
-                href='https://github.com/abs-coder' 
+                href='https://github.com/abs-futy7' 
                 target='_blank' 
                 rel='noreferrer' 
                 className='flex items-center gap-1 text-lg md:text-xl font-medium text-white hover:text-purple-400 transition-colors duration-300 underline'
@@ -50,7 +50,7 @@ function Contact() {
               </a>
               
               <a 
-                href='https://www.linkedin.com/in/abs-coder/' 
+                href='https://www.linkedin.com/in/md-abu-bakar-siddique-59b881237/' 
                 target='_blank' 
                 rel='noreferrer' 
                 className='flex items-center gap-1 text-lg md:text-xl font-medium text-white hover:text-purple-400 transition-colors duration-300 underline'
@@ -59,12 +59,12 @@ function Contact() {
               </a>
               
               <a 
-                href='https://twitter.com/abs_coder' 
+                href='https://www.behance.net/_A_BS_750' 
                 target='_blank' 
                 rel='noreferrer' 
                 className='flex items-center gap-1 text-lg md:text-xl font-medium text-white hover:text-purple-400 transition-colors duration-300 underline'
               >
-                Twitter <MdArrowOutward className='text-xl md:text-2xl' />
+                Behance <MdArrowOutward className='text-xl md:text-2xl' />
               </a>
             </div>
           </div>
@@ -76,7 +76,7 @@ function Contact() {
                 Designed & Developed <br/>by 
                 <span className='text-purple-500'> Abs</span>
                 <br />
-                <span className='text-gray-400 text-lg md:text-xl'>© 2025</span>
+                <span className='text-gray-400 text-lg md:text-xl'>© 2026</span>
               </div>
             </div>
           </div>

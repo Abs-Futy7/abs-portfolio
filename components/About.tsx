@@ -56,17 +56,17 @@ function About() {
               
               <div className="space-y-6">
                 <div className="border-l-2 border-purple-500/50 pl-4">
-                  <h3 className="text-xl font-medium text-white/90">Associate Secretary – Faculty of Science <span className='bg-green-400/30 py-1 px-2 rounded-full text-sm text-green-400'>Feb 2025 – Present</span></h3>
+                  <h3 className="text-xl font-medium text-white/90">Associate Secretary – Faculty of Science <span className='bg-orange-400/30 py-1 px-2 rounded-full text-sm text-orange-400'>Feb 2025 – Jan 2026</span></h3>
                   <p className="text-gray-400">Dhaka University Career Club, Dhaka </p>
                 </div>
                 
                 <div className="border-l-2 border-purple-500/30 pl-4">
-                  <h3 className="text-lg font-medium text-white/90">Graphics & Visual Branding Lead <span className='bg-red-400/30 py-1 px-2 rounded-full text-sm text-red-400'>Jun 2022 – Jul 2023</span></h3>
+                  <h3 className="text-lg font-medium text-white/90">Graphics & Visual Branding Lead <span className='bg-orange-400/30 py-1 px-2 rounded-full text-sm text-orange-400'>Jun 2022 – Jul 2023</span></h3>
                   <p className="text-gray-400">Notre Dame English Club</p>
                 </div>
 
                 <div className="border-l-2 border-purple-500/30 pl-4">
-                  <h3 className="text-lg font-medium text-white/90">President of Publications <span className='bg-red-400/30 py-1 px-2 rounded-full text-sm text-red-400'>Jun 2022 – Jul 2023</span></h3>
+                  <h3 className="text-lg font-medium text-white/90">President of Publications <span className='bg-orange-400/30 py-1 px-2 rounded-full text-sm text-orange-400'>Jun 2022 – Jul 2023</span></h3>
                   <p className="text-gray-400">Notre Dame Information Technology Club</p>
                 </div>
               </div>
