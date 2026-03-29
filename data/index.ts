@@ -56,6 +56,19 @@ export const projects: Project[] = [
         tags: ["NextJs", "Gemini", "CrewAI", "Agentic AI", "FastApi"]
     },
     {
+        id: 8,
+        slug: "federag",
+        title: "FedeRAG",
+        description: "FedeRAG is a production-grade RAG system with hybrid retrieval, cross-encoder reranking, citation enforcement, Langfuse tracing, Prometheus metrics, Grafana dashboards, and a CI quality gate that blocks regressions on every PR.",
+        img: "/projects/federag/federag.png",
+        images: ["/projects/federag/1.png", "/projects/federag/2.png", "/projects/federag/3.png", "/projects/federag/4.png", "/projects/federag/6.png"],
+        githubLink: "https://github.com/Abs-Futy7/FedeRAG",
+        repoLink: "https://github.com/Abs-Futy7/FedeRAG",
+        link: "https://github.com/Abs-Futy7/FedeRAG",
+        tags: ["Next.js", "FastAPI", "Grafana", "Prometheus", "Github Actions", "Langfuse", "RAGAS"]
+
+    },
+    {
         id: 0,
         slug: "mindmate",
         title: "MindMate",
