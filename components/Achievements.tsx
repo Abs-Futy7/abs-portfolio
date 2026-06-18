@@ -1,8 +1,9 @@
 "use client"
 import { achievements } from '@/data'
+import Image from 'next/image'
 import React from 'react'
 import { FiExternalLink } from 'react-icons/fi'
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 
 function Achievements() {
   return (
@@ -27,10 +28,15 @@ function Achievements() {
             whileHover={{ y: -5 }}
           >
             <div className='relative'>
-              <img 
+              <Image
                 src={achievement.img} 
                 alt={achievement.name} 
-                className='w-full h-48 object-cover' 
+                width={420}
+                height={220}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="lazy"
+                quality={70}
+                className='h-48 w-full object-cover'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-black/50 to-transparent'></div>
               {/*gradient overlay disi*/}

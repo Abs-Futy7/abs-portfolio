@@ -325,20 +325,23 @@ export const achievements = [
 
 
 export const webDevSkills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
     "TypeScript",
-    "React.js",
     "Next.js",
-    "Tailwind CSS",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "PostgreSQL",
     "FastAPI",
-    "Flutter",
-    "Git & GitHub"
+    "Python",
+    "LLM Agents",
+    "RAG",
+    "CrewAI",
+    "LangChain",
+    "LangGraph",
+    "Gemini",
+    "ChromaDB",
+    "RAGAS",
+    "Langfuse",
+    "Prometheus",
+    "Grafana",
+    "PostgreSQL",
+    "Docker"
 ];
 
 

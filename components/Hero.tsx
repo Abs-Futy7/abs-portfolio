@@ -1,9 +1,6 @@
-"use client";
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/lib/utils";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { ReactTyped } from "react-typed";
 
 function Hero() {
   return (
@@ -32,21 +29,20 @@ function Hero() {
       {/* Main Content */}
       <div className="relative z-10 flex h-full w-full max-w-7xl mx-auto px-6">
         <div className="w-full flex flex-col justify-center items-center py-10 lg:py-20 z-10 text-center">
-          <TextGenerateEffect
-            words="Hi, I'm Abu Bakar"
+          <h1
             className={cn(
-              "text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-[Neue_Machina] tracking-tight font-extralight text-center leading-[0.95] bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 text-transparent bg-clip-text"
+              "neue-machina text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extralight text-center leading-[0.95] bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 text-transparent bg-clip-text"
             )}
-            filter={true}
-            duration={1.5}
-          />
-          <ReactTyped
-            className="font-[Neue_Machina] text-5xl sm:text-5xl md:text-8xl font-extralight text-center mt-4 max-w-4xl leading-[1.15] pb-1 bg-gradient-to-r from-white via-purple-300 to-purple-700 text-transparent bg-clip-text"
-            strings={["Crafting Codes", "Catching Flags", "Creating Visuals"]}
-            typeSpeed={60}
-            backSpeed={70}
-            loop
-          />
+          >
+            Hi, I&apos;m Abu Bakar
+          </h1>
+          <div className="neue-machina mt-4 text-5xl sm:text-5xl md:text-8xl font-extralight text-center max-w-4xl leading-[1.15] pb-1 bg-gradient-to-r from-white via-purple-300 to-purple-700 text-transparent bg-clip-text">
+            <span className="hero-word-cycle" aria-label="Crafting Codes, Catching Flags, Creating Visuals">
+              <span>Crafting Codes</span>
+              <span>Catching Flags</span>
+              <span>Creating Visuals</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>

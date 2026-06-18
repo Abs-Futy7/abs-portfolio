@@ -1,12 +1,7 @@
 import Hero from "@/components/Hero";
-import RecentProjects from "@/components/RecentProjects";
 import { navItems } from "@/data";
 import Navbar from "@/components/Navbar";
-import Ctf from "@/components/Ctf";
-import About from "@/components/About";
-import Achievements from "../components/Achievements";
-import Contact from "../components/Contact";
-import Visuals from "@/components/Visuals";
+import LazySection from "@/components/LazySection";
 
 
 
@@ -20,24 +15,12 @@ export default function Home() {
         <Navbar items={navItems}/>
           <Hero/>
         </section>
-        <section id="about">
-          <About/>
-        </section>
-        <section id="projects">
-          <RecentProjects/>
-        </section>
-        <section id= 'visuals'>
-          <Visuals/>
-        </section>
-        <section id="ctfs">
-          <Ctf/>
-        </section>
-        <section id = 'achievements'>
-          <Achievements/>
-        </section>
-        <section id="contact">
-          <Contact/>
-        </section>
+        <LazySection id="about" section="About" minHeight="90vh" />
+        <LazySection id="projects" section="RecentProjects" minHeight="100vh" />
+        <LazySection id="visuals" section="Visuals" minHeight="80vh" />
+        <LazySection id="ctfs" section="Ctf" minHeight="80vh" />
+        <LazySection id="achievements" section="Achievements" minHeight="80vh" />
+        <LazySection id="contact" section="Contact" minHeight="40vh" />
         <div className="h-6"></div>
         
       </main>

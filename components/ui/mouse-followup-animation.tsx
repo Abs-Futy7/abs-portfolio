@@ -1,110 +1,92 @@
 "use client";
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
-
-const SPRING = {
-  mass: 0.1,
-  damping: 10,
-  stiffness: 131,
-};
 
 type MouseFollowupAnimationProps = {
   className?: string;
 };
 
-const SimpleMouseFollow = () => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const opacity = useMotionValue(0);
+const moveDot = (
+  dot: HTMLDivElement | null,
+  x: number,
+  y: number,
+  visible = true
+) => {
+  if (!dot) return;
 
-  const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    const bounds = e.currentTarget.getBoundingClientRect();
-    x.set(e.clientX - bounds.left);
-    y.set(e.clientY - bounds.top);
-  };
+  dot.style.opacity = visible ? "1" : "0";
+  dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+};
+
+const SimpleMouseFollow = () => {
+  const dotRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
-      onPointerMove={(e) => {
-        handlePointerMove(e);
+      onPointerMove={(event) => {
+        const bounds = event.currentTarget.getBoundingClientRect();
+        moveDot(dotRef.current, event.clientX - bounds.left, event.clientY - bounds.top);
       }}
       onPointerEnter={() => {
-        opacity.set(1);
+        if (dotRef.current) dotRef.current.style.opacity = "1";
       }}
       onPointerLeave={() => {
-        opacity.set(0);
+        if (dotRef.current) dotRef.current.style.opacity = "0";
       }}
       className="rounded-full bg-background mt-20 size-[500px] cursor-none overflow-hidden"
     >
-      <motion.div
-        style={{
-          x,
-          y,
-          opacity,
-        }}
-        className="rounded-full size-5 bg-[#ccc]"
-      ></motion.div>
+      <div ref={dotRef} className="rounded-full size-5 bg-[#ccc] opacity-0 transition-opacity" />
     </div>
   );
 };
 
 const SpringMouseFollow = () => {
-  const xSpring = useSpring(0, SPRING);
-  const ySpring = useSpring(0, SPRING);
-  const opacitySpring = useSpring(0, SPRING);
-  const scaleSpring = useSpring(0, SPRING);
+  const dotRef = useRef<HTMLDivElement>(null);
 
   return (
     <div
-      onPointerMove={(e) => {
-        const bounds = e.currentTarget.getBoundingClientRect();
-        xSpring.set(e.clientX - bounds.left);
-        ySpring.set(e.clientY - bounds.top);
+      onPointerMove={(event) => {
+        const bounds = event.currentTarget.getBoundingClientRect();
+        moveDot(dotRef.current, event.clientX - bounds.left, event.clientY - bounds.top);
       }}
       onPointerEnter={() => {
-        opacitySpring.set(1);
-        scaleSpring.set(1);
+        if (dotRef.current) dotRef.current.style.opacity = "1";
       }}
       onPointerLeave={() => {
-        opacitySpring.set(0);
-        scaleSpring.set(0);
+        if (dotRef.current) dotRef.current.style.opacity = "0";
       }}
       className="rounded-full bg-background mt-20 size-[500px] overflow-hidden"
     >
-      <motion.div
-        style={{
-          x: xSpring,
-          y: ySpring,
-          opacity: opacitySpring,
-          scale: scaleSpring,
-        }}
-        className="rounded-full size-5 bg-purple-500"
-      ></motion.div>
+      <div
+        ref={dotRef}
+        className="rounded-full size-5 bg-purple-500 opacity-0 transition-[opacity,transform] duration-150"
+      />
     </div>
   );
 };
 
 const MouseFollowupAnimation = ({ className }: MouseFollowupAnimationProps) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const xSpring = useSpring(x, SPRING);
-  const ySpring = useSpring(y, SPRING);
-  const opacitySpring = useSpring(0, SPRING);
-  const scaleSpring = useSpring(0, SPRING);
+  const dotRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<number | null>(null);
+  const positionRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    const updateDot = () => {
+      frameRef.current = null;
+      moveDot(dotRef.current, positionRef.current.x - 16, positionRef.current.y - 16);
+    };
+
     const handleMove = (event: PointerEvent) => {
-      x.set(event.clientX);
-      y.set(event.clientY);
-      opacitySpring.set(1);
-      scaleSpring.set(1);
+      positionRef.current = { x: event.clientX, y: event.clientY };
+
+      if (frameRef.current === null) {
+        frameRef.current = window.requestAnimationFrame(updateDot);
+      }
     };
 
     const handleLeave = () => {
-      opacitySpring.set(0);
-      scaleSpring.set(0);
+      if (dotRef.current) dotRef.current.style.opacity = "0";
     };
 
     window.addEventListener("pointermove", handleMove, { passive: true });
@@ -115,22 +97,21 @@ const MouseFollowupAnimation = ({ className }: MouseFollowupAnimationProps) => {
       window.removeEventListener("pointermove", handleMove);
       window.removeEventListener("pointerleave", handleLeave);
       window.removeEventListener("blur", handleLeave);
+
+      if (frameRef.current !== null) {
+        window.cancelAnimationFrame(frameRef.current);
+      }
     };
-  }, [opacitySpring, scaleSpring, x, y]);
+  }, []);
 
   return (
     <div
       aria-hidden="true"
       className={cn("pointer-events-none absolute inset-0 overflow-hidden", className)}
     >
-      <motion.div
-        style={{
-          x: xSpring,
-          y: ySpring,
-          opacity: opacitySpring,
-          scale: scaleSpring,
-        }}
-        className="absolute size-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500"
+      <div
+        ref={dotRef}
+        className="absolute size-8 rounded-full bg-purple-500 opacity-0 transition-opacity duration-150 will-change-transform"
       />
     </div>
   );
@@ -149,7 +130,7 @@ const Skiper61 = () => {
       </div>
       <div className="flex h-screen w-full snap-start flex-col items-center justify-center px-5">
         <div className="grid content-start justify-items-center gap-6 text-center">
-          <span className="after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:from-transparent after:content-['']">
+          <span className="after:to-foreground relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:content-['']">
             Mouse follow with Spring
           </span>
         </div>

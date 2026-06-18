@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaCode, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
+import { motion } from 'motion/react';
+import { FaBrain, FaGraduationCap, FaBriefcase } from 'react-icons/fa';
 import { GoArrowDown } from 'react-icons/go';
 import { MdOutlineSecurity } from 'react-icons/md';
 import { SiMaterialdesignicons } from 'react-icons/si';
@@ -56,6 +56,19 @@ function About() {
               
               <div className="space-y-6">
                 <div className="border-l-2 border-purple-500/50 pl-4">
+                  <h3 className="text-xl font-medium text-white/90">
+                    Data Annotator (RLHF){" "}
+                    <span className='bg-orange-400/30 py-1 px-2 rounded-full text-sm text-orange-400'>
+                      Aug 2024 - Present
+                    </span>
+                  </h3>
+                  <p className="text-gray-400 font-bold">SuperAnnotate / Databricks</p>
+                  <p className="mt-2 text-gray-400">
+                    Evaluated and generated AI prompt responses, developed test cases, and curated datasets to improve LLM performance on programming tasks.
+                  </p>
+                </div>
+
+                <div className="border-l-2 border-purple-500/50 pl-4">
                   <h3 className="text-xl font-medium text-white/90">Associate Secretary – Faculty of Science <span className='bg-orange-400/30 py-1 px-2 rounded-full text-sm text-orange-400'>Feb 2025 – Jan 2026</span></h3>
                   <p className="text-gray-400">Dhaka University Career Club, Dhaka </p>
                 </div>
@@ -106,7 +119,7 @@ function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {/* Web Development Card */}
+            {/* AI/ML & Full-Stack Card */}
             <motion.div 
               className="bg-black/40 backdrop-blur-sm border border-orange-500/30 rounded-lg p-6 hover:border-orange-500/80 transition-all duration-300"
               whileHover={{ y: -5 }}
@@ -115,12 +128,12 @@ function About() {
             >
               <div className="flex items-start gap-4 ">
                 <div className="bg-orange-500/20 p-3 rounded-lg">
-                  <FaCode className="text-orange-500 text-2xl" />
+                  <FaBrain className="text-orange-500 text-2xl" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium text-white/90 mb-2">Web Development</h3>
+                  <h3 className="text-xl font-medium text-white/90 mb-2">AI/ML & Full-Stack</h3>
                   <p className="text-gray-400 mb-2">
-                    Building modern, responsive, and accessible websites with clean code and intuitive structure
+                    Building LLM-powered products with RAG, agentic workflows, evaluation pipelines, and modern full-stack interfaces.
                   </p>
                   
                   <motion.div 

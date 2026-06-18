@@ -14,6 +14,7 @@ const raleway = Raleway({
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://abs-portfolio-ten.vercel.app"),
   title: "Abs Portfolio",
   description: "A modern, interactive portfolio website showcasing Abu Bakar Siddique's expertise in cybersecurity, software development, and competitive programming.",
   keywords: ["portfolio", "web development", "cybersecurity", "nextjs", "threejs", "Abu Bakar Siddique", "design"],

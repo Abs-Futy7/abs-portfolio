@@ -1,7 +1,6 @@
-"use client";
-
 import { cn } from "@/lib/utils";
-import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import React from "react";
 
 export const MovingCards = ({
   items,
@@ -19,80 +18,42 @@ export const MovingCards = ({
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const duration = speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+  const animationDirection = direction === "left" ? "forwards" : "reverse";
+  const duplicatedItems = [...items, ...items];
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
-  const [start, setStart] = useState(false);
-  function addAnimation() {
-    if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
-
-      getDirection();
-      getSpeed();
-      setStart(true);
-    }
-  }
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "forwards",
-        );
-      } else {
-        containerRef.current.style.setProperty(
-          "--animation-direction",
-          "reverse",
-        );
-      }
-    }
-  };
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
   return (
     <div
-      ref={containerRef}
       className={cn(
         "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
         className,
       )}
+      style={
+        {
+          "--animation-direction": animationDirection,
+          "--animation-duration": duration,
+        } as React.CSSProperties
+      }
     >
       <ul
-        ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
-          start && "animate-scroll",
+          "flex w-max min-w-full shrink-0 flex-nowrap gap-4 py-4 animate-scroll",
           pauseOnHover && "hover:[animation-play-state:paused]",
         )}
       >
-        {items.map((item, idx) => (
+        {duplicatedItems.map((item, idx) => (
           <li
-            key={idx}
-            className="flex-shrink-0 w-70 h-70 rounded-lg overflow-hidden shadow-lg"
+            key={`${item.src}-${idx}`}
+            className="relative h-[17.5rem] w-[17.5rem] flex-shrink-0 overflow-hidden rounded-lg shadow-lg"
           >
-            <img
+            <Image
               src={item.src}
               alt={item.alt}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 768px) 70vw, 280px"
+              loading="lazy"
+              quality={70}
+              className="object-cover"
             />
           </li>
         ))}
